@@ -1,0 +1,25 @@
+{
+  "name": "fit-time-clients",
+  "version": "1.0.0",
+  "description": "Fitness App for client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmoore4452/fit-time-clients.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bmoore4452/fit-time-clients/issues"
+  },
+  "homepage": "https://github.com/Bmoore4452/fit-time-clients#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
