@@ -1,0 +1,15 @@
+[
+  {
+    "username": "bmoore4452",
+    "email": "bmoore@gmail.com",
+    "password": "bmoore1234",
+    "name": "Brian Moore",
+    "stats": [
+      {
+        "age": 35,
+        "height": 73,
+        "weight": 230
+      }
+    ]
+  }
+]

@@ -7,14 +7,17 @@ const typeDefs = gql`
     email: String!
     password: String!
     name: String
-    stats: [String]
+    stats: [Stats]
   }
 
   type Stats {
-    _id: ID
     age: Int
     height: Float
     weight: Float
+  }
+
+  type Query {
+    clients: [Client]
   }
 `;
 
