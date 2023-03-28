@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const Stats = require('./Stats');
+const bcrypt = require('bcrypt');
 
 const clientSchema = new Schema({
   username: {
@@ -21,6 +22,7 @@ const clientSchema = new Schema({
   password: {
     type: String,
     required: true,
+    minlength: 5,
   },
   name: {
     type: String,
@@ -28,6 +30,21 @@ const clientSchema = new Schema({
   },
   stats: [Stats.schema],
 });
+
+// hashes password
+clientSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+// validates password login
+clientSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 
 const Client = model('Client', clientSchema);
 

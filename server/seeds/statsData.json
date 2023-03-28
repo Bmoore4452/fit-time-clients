@@ -1,0 +1,18 @@
+[
+  {
+    "sex": "male",
+    "age": 35,
+    "height": 73,
+    "weight": 240,
+    "activity": "none",
+    "target": 220
+  },
+  {
+    "sex": "male",
+    "age": 18,
+    "height": 73,
+    "weight": 315,
+    "activity": "none",
+    "target": 270
+  }
+]

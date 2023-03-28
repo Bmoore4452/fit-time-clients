@@ -4,12 +4,13 @@
     "email": "bmoore@gmail.com",
     "password": "bmoore1234",
     "name": "Brian Moore",
-    "stats": [
-      {
-        "age": 35,
-        "height": 73,
-        "weight": 230
-      }
-    ]
+    "stats": []
+  },
+  {
+    "username": "Lamar6564",
+    "email": "lamar@gmail.com",
+    "password": "lamar5678",
+    "name": "Lamar Moore",
+    "stats": []
   }
 ]

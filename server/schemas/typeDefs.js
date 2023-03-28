@@ -10,14 +10,45 @@ const typeDefs = gql`
     stats: [Stats]
   }
 
-  type Stats {
+  input AddStats {
+    sex: String
     age: Int
     height: Float
     weight: Float
+    activity: String
+    target: Float
+  }
+
+  type Stats {
+    sex: String
+    age: Int
+    height: Float
+    weight: Float
+    activity: String
+    target: Float
+  }
+
+  type Auth {
+    token: ID!
+    client: Client
   }
 
   type Query {
     clients: [Client]
+    client(clientId: ID!): Client
+  }
+
+  type Mutation {
+    addClient(
+      username: String!
+      email: String!
+      password: String!
+      name: String
+      stats: AddStats
+    ): Auth
+    login(email: String!, password: String!): Auth
+    updatePassword(email: String!, password: String!): Auth
+    # updatePassword(email: String!): Auth
   }
 `;
 
